@@ -1,0 +1,238 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tampilan keseluruhan body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #70a3dd;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container utama untuk To Do List */
+.todo-container {
+    background-color: rgb(126, 216, 238);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Header bagian atas */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.logout-button {
+    text-decoration: none;
+    color: #f50606;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.logout-button:hover {
+    color: #ff1f2d;
+}
+
+/* Formulir input task */
+form {
+    margin-bottom: 20px;
+}
+
+form p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+select:focus {
+    outline: none;
+    border-color: #4e9f3d;
+}
+
+button {
+    background-color: #4e9f3d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #3c7e2e;
+}
+
+/* Subtask button */
+button[type="button"] {
+    background-color: #f1a800;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+button[type="button"]:hover {
+    background-color: #e68e00;
+}
+
+/* Tampilan list task */
+.todo-list {
+    margin-top: 30px;
+}
+
+.todo {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.todo.completed {
+    background-color: #d4edda;
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.todo h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.todo p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.todo .complete-todo,
+.todo .edit-todo,
+.todo .remove-todo {
+    background-color: #4e9f3d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.todo .complete-todo:hover,
+.todo .edit-todo:hover,
+.todo .remove-todo:hover {
+    background-color: #3c7e2e;
+}
+
+/* Tombol pengeditan */
+.todo .edit-todo {
+    background-color: #f1a800;
+}
+
+.todo .edit-todo:hover {
+    background-color: #e68e00;
+}
+
+/* Tombol penghapusan */
+.todo .remove-todo {
+    background-color: #ff4b5c;
+}
+
+.todo .remove-todo:hover {
+    background-color: #ff1f2d;
+}
+
+/* Form pencarian task */
+form input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin-left: 10px;
+    background-color: #4e9f3d;
+}
+
+form button:hover {
+    background-color: #3c7e2e;
+}
+
+/* Responsivitas layar kecil */
+@media (max-width: 768px) {
+    .todo-container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    form input[type="text"],
+    form input[type="datetime-local"],
+    form select {
+        font-size: 0.9rem;
+    }
+
+    .todo h3 {
+        font-size: 1.2rem;
+    }
+
+    .todo p {
+        font-size: 0.9rem;
+    }
+}
+/* Menambahkan gaya untuk tugas yang sudah selesai */
+.todo.completed {
+    background-color: #d4edda;  /* Warna latar belakang hijau terang untuk menandakan selesai */
+    text-decoration: line-through;  /* Menambahkan coretan pada teks */
+    color: #6c757d;  /* Mengubah warna teks menjadi abu-abu */
+}
+
+/* Jika deadline sudah lewat, beri warna latar belakang yang lebih gelap untuk menandakan bahwa task tersebut terlambat */
+.todo.completed {
+    background-color: #f8d7da;  /* Warna latar belakang merah muda untuk menandakan keterlambatan */
+    text-decoration: line-through;
+}
+

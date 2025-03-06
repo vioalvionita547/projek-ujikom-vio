@@ -1,0 +1,128 @@
+
+/* Reset dasar */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Warna background utama */
+body {
+    background: rgb(134, 134, 229);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container utama */
+.todo-container {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    width: 700px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.todo-container header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.todo-container h1 {
+    font-size: 24px;
+    color: #102f5e;
+}
+
+/* Form tambah task */
+#todo-form {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#todo-form p {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-control input,
+.form-control select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Tombol Tambah */
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* List Task */
+.task-list {
+    margin-top: 20px;
+}
+
+.task-item {
+    background: white;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.task-item h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+/* Style untuk Subtask */
+.subtask-list {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.subtask-item {
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* Style untuk metadata task */
+.task-metadata {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.task-metadata span {
+    font-weight: bold;
+}
+

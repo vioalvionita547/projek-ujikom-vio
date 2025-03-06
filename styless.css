@@ -1,0 +1,161 @@
+/* Reset beberapa gaya default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Gaya Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(siti.jpg);
+}
+
+/* Container Utama */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #63e0d6;
+}
+
+/* Gaya untuk bagian form login */
+.login {
+    padding: 30px;
+    width: 50%;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #4cc0fa;
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk form input dan label */
+label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: rgb(123, 235, 225);
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Gaya untuk pesan error */
+p {
+    text-align: center;
+    color: red;
+    font-size: 0.9em;
+}
+
+/* Gaya untuk link Lupa Password dan Register */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Gaya untuk ikon toggle password */
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+    padding: 10px;
+    height: 40px; /* Pastikan tinggi input cukup */
+    padding-right: 40px; /* Pastikan ada ruang untuk ikon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em; /* Sesuaikan ukuran ikon */
+    color: #333; /* Sesuaikan warna jika perlu */
+}
+
+/* Gaya untuk bagian gambar */
+.right {
+    width: 50%;
+    background-color: #12bfdd;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-left: 1px solid #ddd;
+}
+
+/* Responsif: Menyesuaikan dengan ukuran layar lebih kecil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .login {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+        height: 300px;
+        border-left: none;
+    }
+
+    .right img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
